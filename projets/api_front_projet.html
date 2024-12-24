@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - Détails</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-inner img {
+            border-radius: 10px;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        .section-header {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #333;
+        }
+        .lead {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Retour à l'Index</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Accueil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenu du projet API -->
+<div class="container mt-5">
+    <!-- Titre du projet -->
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center section-header">API - Gestion des Données</h1>
+        </div>
+    </div>
+
+    <!-- Description du projet -->
+    <div class="row">
+        <div class="col-md-12">
+            <p class="lead">Ce projet consiste à développer une API RESTful permettant de gérer des ressources telles que des utilisateurs, des produits ou des commandes. L'objectif était de créer une interface accessible via HTTP pour manipuler ces ressources (CRUD).</p>
+            <p>Le projet utilise le framework Symfony et expose les données via des points d'accès sécurisés en utilisant des jetons d'authentification (JWT). Chaque requête peut être filtrée, triée et paginée pour une utilisation optimale côté client.</p>
+            <p>Les principales difficultés rencontrées ont été la gestion des autorisations et la mise en place des tests pour garantir la fiabilité de l'API.</p>
+        </div>
+    </div>
+
+    <!-- Carrousel d'images -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div id="carouselAPI" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAPI" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselAPI" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+API" class="d-block w-100" alt="Image API">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+API+2" class="d-block w-100" alt="Image API 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAPI" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAPI" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bilan des apprentissages -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="section-header">Bilan des apprentissages</h2>
+            <p>Ce projet m'a permis de renforcer mes compétences en développement d'API RESTful. J'ai appris à sécuriser une API avec des tokens JWT et à gérer les requêtes HTTP efficacement. L'intégration de tests avec PHPUnit a également été un point clé pour garantir le bon fonctionnement de l'API.</p>
+        </div>
+    </div>
+
+    <!-- Bouton retour -->
+    <div class="container text-center mt-4">
+        <a href="../index.html" class="btn btn-secondary">Retour à la liste des projets</a>
+    </div>
+</div>
+
+<!-- Script Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

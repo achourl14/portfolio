@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello/Roller - Détails</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Retour à l'Index</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenu du projet Trello/Roller -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-4 text-center">Trello/Troller - Gestion de Projet Agile</h1>
+        </div>
+    </div>
+
+    <!-- Description du projet -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <p class="lead">Ce projet a consisté à développer une application inspirée de Trello pour gérer des tâches de manière collaborative. L'interface permet de créer des tableaux de gestion, d'ajouter des cartes et de suivre l'avancement des projets en temps réel.</p>
+            <p>L'application utilise un modèle de gestion agile avec des tableaux, listes et cartes. Les utilisateurs peuvent glisser-déposer les cartes entre les différentes listes (par exemple, "À faire", "En cours", "Terminé").</p>
+            <p>Le défi majeur était de maintenir une interface réactive et de gérer les mises à jour en temps réel avec WebSocket.</p>
+        </div>
+    </div>
+
+    <!-- Carrousel d'images -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div id="carouselTrello" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselTrello" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselTrello" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+Trello" class="d-block w-100" alt="Image Trello">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+Trello+2" class="d-block w-100" alt="Image Trello 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrello" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTrello" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bilan des apprentissages -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>Bilan des apprentissages</h2>
+            <p>J'ai appris à utiliser WebSocket pour mettre à jour l'interface en temps réel, ce qui est crucial pour des applications collaboratives comme celle-ci. Le projet m'a aussi permis de perfectionner mes compétences en gestion de projet agile et d'approfondir mes connaissances sur le front-end dynamique avec JavaScript et React.</p>
+        </div>
+    </div>
+
+    <!-- Bouton retour -->
+    <div class="container text-center mt-4">
+        <a href="../index.html" class="btn btn-secondary">Retour à la liste des projets</a>
+    </div>
+</div>
+
+<!-- Script Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
