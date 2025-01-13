@@ -35,47 +35,155 @@
     <!-- Description du projet -->
     <div class="row mt-4">
         <div class="col-md-12">
-            <p class="lead">Ce projet a consisté à développer une application inspirée de Trello pour gérer des tâches de manière collaborative. L'interface permet de créer des tableaux de gestion, d'ajouter des cartes et de suivre l'avancement des projets en temps réel.</p>
-            <p>L'application utilise un modèle de gestion agile avec des tableaux, listes et cartes. Les utilisateurs peuvent glisser-déposer les cartes entre les différentes listes (par exemple, "À faire", "En cours", "Terminé").</p>
-            <p>Le défi majeur était de maintenir une interface réactive et de gérer les mises à jour en temps réel avec WebSocket.</p>
+            <section>
+                <h2>1. Introduction et contexte</h2>
+                <p>
+                    Ce projet s’inscrit dans le cadre du BUT Informatique et vise à développer un clone minimaliste du célèbre outil de gestion de projet <strong>Trello</strong>.
+                    L’objectif était de proposer une solution permettant de gérer des tableaux, colonnes et cartes, tout en garantissant une interface utilisateur intuitive, sécurisée et fonctionnelle.
+                </p>
+                <p>
+                    Dans un environnement de travail de plus en plus dématérialisé et collaboratif, disposer d’un tel outil est indispensable pour organiser les tâches efficacement.
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Objectifs spécifiques</h2>
+                <ul>
+                    <li>Analyser et corriger les failles de l’application initiale.</li>
+                    <li>Normaliser la base de données pour éviter la redondance et améliorer les performances.</li>
+                    <li>Appliquer les principes de qualité du code et de sécurité.</li>
+                    <li>Ajouter des fonctionnalités dynamiques (drag-and-drop, suppression asynchrone) pour améliorer l’expérience utilisateur.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Étapes réalisées</h2>
+
+                <article>
+                    <h3>Analyse de l’application existante</h3>
+                    <ul>
+                        <li>Problèmes de normalisation de la base de données (aucune des trois formes normales n’était respectée).</li>
+                        <li>Failles de sécurité : mots de passe stockés en clair, erreurs trop précises, cookies non sécurisés.</li>
+                        <li>Absence de principes SOLID, duplication de code, manque de tests unitaires.</li>
+                        <li>Problèmes fonctionnels : suppression incorrecte des colonnes/cartes, interface peu intuitive.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Amélioration et refonte technique</h3>
+                    <ul>
+                        <li><strong>Base de données :</strong> restructuration complète pour respecter les normes de normalisation.</li>
+                        <li><strong>Sécurité :</strong> hachage des mots de passe, suppression des failles liées aux cookies.</li>
+                        <li><strong>Qualité du code :</strong> adoption des principes SOLID, documentation des fonctionnalités.</li>
+                        <li><strong>Dynamisme de l’interface :</strong> fonctionnalités asynchrones (suppression sans rechargement), drag-and-drop en planification.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Méthodologie et gestion de projet</h3>
+                    <p>
+                        Approche agile avec planification par sprints, réunions régulières et outils comme Trello pour le suivi des tâches.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2>4. Résultats obtenus</h2>
+                <ul>
+                    <li>Base de données normalisée et failles critiques corrigées.</li>
+                    <li>Code modulaire et maintenable grâce aux principes SOLID.</li>
+                    <li>Améliorations dynamiques pour une meilleure expérience utilisateur.</li>
+                    <li>Livrables produits : site web fonctionnel, documentation technique et rapport final.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Compétences développées</h2>
+                <ul>
+                    <li><strong>Compétences techniques :</strong> optimisation de bases de données, sécurité informatique.</li>
+                    <li><strong>Compétences en gestion de projet :</strong> utilisation de méthodes agiles.</li>
+                    <li><strong>Compétences collaboratives :</strong> travail en équipe pluridisciplinaire.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Bilan personnel</h2>
+                <p>
+                    Ce projet a permis d’acquérir une expertise approfondie dans l’analyse et la refonte d’applications informatiques, tout en renforçant la capacité à travailler en équipe dans des délais contraints.
+                    Les difficultés techniques ont été surmontées grâce à une approche collaborative et proactive.
+                </p>
+            </section>
+
+            <section>
+                <h2>7. Conclusion</h2>
+                <p>
+                    Grâce à ce projet, une application imparfaite a été transformée en un outil sécurisé, optimisé et prêt à évoluer. Les bases solides posées garantissent la viabilité et la maintenabilité du système.
+                    Ce projet constitue une étape clé dans notre parcours de formation et nous prépare à relever des défis techniques dans des environnements professionnels.
+                </p>
+            </section>
         </div>
     </div>
 
     <!-- Carrousel d'images -->
+
     <div class="row mt-5">
         <div class="col-md-12">
-            <div id="carouselTrello" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselStage" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselTrello" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselTrello" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStage" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/1200x600?text=Image+Trello" class="d-block w-100" alt="Image Trello">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+Stage" class="d-block w-100" alt="Image Stage">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/1200x600?text=Image+Trello+2" class="d-block w-100" alt="Image Trello 2">
+                        <img src="https://via.placeholder.com/1200x600?text=Image+Stage+2" class="d-block w-100" alt="Image Stage 2">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrello" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselStage" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselTrello" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselStage" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
     </div>
-
-    <!-- Bilan des apprentissages -->
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2>Bilan des apprentissages</h2>
-            <p>J'ai appris à utiliser WebSocket pour mettre à jour l'interface en temps réel, ce qui est crucial pour des applications collaboratives comme celle-ci. Le projet m'a aussi permis de perfectionner mes compétences en gestion de projet agile et d'approfondir mes connaissances sur le front-end dynamique avec JavaScript et React.</p>
+    <!-- Section Apprentissages Critiques -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Apprentissages Critiques</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Optimisation de Base de Données</h5>
+                        <p class="card-text">Restructuration complète pour respecter les normes de normalisation, réduisant la redondance et améliorant les performances.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Sécurité Informatique</h5>
+                        <p class="card-text">Hachage des mots de passe, correction des failles de cookies, et amélioration globale de la sécurité.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Dynamisme de l’Interface</h5>
+                        <p class="card-text">Ajout de fonctionnalités modernes comme le drag-and-drop et des interactions asynchrones pour une meilleure expérience utilisateur.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     <!-- Bouton retour -->
     <div class="container text-center mt-4">

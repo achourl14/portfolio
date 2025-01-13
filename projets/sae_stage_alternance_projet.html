@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Stage et Alternance - Détails</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Justification du texte */
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
 <!-- Barre de navigation -->
@@ -35,9 +41,9 @@
     <!-- Description du projet -->
     <div class="row mt-4">
         <div class="col-md-12">
-            <p class="lead">Ce projet a pour but de gérer les stages et alternances au sein d'une entreprise, en offrant aux étudiants un moyen de postuler et de suivre leur candidature, et aux recruteurs un outil pour gérer leurs offres.</p>
-            <p>Le système est construit autour d'une plateforme web où les utilisateurs peuvent créer des annonces, postuler à des offres et suivre l'évolution de leur candidature.</p>
-            <p>Ce projet m'a permis de travailler sur des fonctionnalités de gestion des utilisateurs, des recherches avancées d'annonces et de gestion de notifications.</p>
+            <p class="lead text-justify">Le projet "Gestion de Stage et Alternance" a été conçu dans le but de fournir une solution complète pour gérer les stages et alternances au sein des entreprises. Cette plateforme web permet aux étudiants de postuler à des offres de stage ou d'alternance et de suivre l’évolution de leurs candidatures, tout en offrant aux recruteurs un outil pour publier leurs offres et gérer les candidatures reçues.</p>
+            <p class="text-justify">Cette application permet de créer, gérer et mettre à jour des offres de stage ou d’alternance. Elle offre aussi aux étudiants un moyen de suivre l’évolution de leur candidature. Le système a été développé en tenant compte des besoins spécifiques des deux parties, avec des fonctionnalités adaptées à chaque profil utilisateur.</p>
+            <p class="text-justify">Durant le développement, j'ai appris à travailler sur des fonctionnalités avancées telles que la gestion des utilisateurs, la mise en place de notifications en temps réel, ainsi que l'intégration de filtres de recherche avancée pour améliorer l'expérience utilisateur. Ce projet a aussi été l’occasion de me perfectionner dans la gestion des bases de données et l’optimisation des performances de l’application.</p>
         </div>
     </div>
 
@@ -48,13 +54,18 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselStage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselStage" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStage" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://via.placeholder.com/1200x600?text=Image+Stage" class="d-block w-100" alt="Image Stage">
+                        <img src="../images/sae-stage/Capture%20d'écran%202025-01-11%20193257.png" class="d-block w-100" alt="Image Stage">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://via.placeholder.com/1200x600?text=Image+Stage+2" class="d-block w-100" alt="Image Stage 2">
+                        <img src="../images/sae-stage/Capture%20d'écran%202025-01-11%20193312.png" class="d-block w-100" alt="Image Stage 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/sae-stage/Capture%20d'écran%202025-01-11%20193323.png" class="d-block w-100" alt="Image Stage 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselStage" data-bs-slide="prev">
@@ -73,7 +84,17 @@
     <div class="row mt-5">
         <div class="col-md-12">
             <h2>Bilan des apprentissages</h2>
-            <p>Grâce à ce projet, j'ai appris à intégrer des fonctionnalités de gestion des utilisateurs et à mettre en place des systèmes de notifications et de suivi. J'ai également renforcé mes compétences dans la gestion des bases de données et la recherche d'annonces complexes.</p>
+            <p class="text-justify">Ce projet m'a permis d'acquérir de nombreuses compétences techniques et professionnelles. L'une des principales leçons que j'ai tirées de cette expérience est l'importance de la modularité dans le développement d'applications web. En utilisant l’architecture MVC, j’ai pu séparer clairement les différentes responsabilités de l'application, ce qui a facilité le processus de développement et simplifié la maintenance du code.</p>
+            <p class="text-justify">J'ai également amélioré mes compétences dans la gestion de bases de données, en créant des tables optimisées et en mettant en place des requêtes complexes pour la recherche d'annonces et le filtrage des résultats. L'intégration de notifications en temps réel m'a permis de comprendre l'importance de l'interaction avec l'utilisateur et de rendre l'application plus réactive.</p>
+        </div>
+    </div>
+
+    <!-- Apprentissages critiques -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>Apprentissages critiques</h2>
+            <p class="text-justify">Une des compétences clés que j’ai développées pendant ce projet est la gestion de la <strong>sécurité des données</strong>. L'implémentation du hachage des mots de passe et la gestion des sessions sécurisées sont des éléments essentiels pour garantir la confidentialité des utilisateurs. Ce projet m'a montré à quel point la sécurité doit être une priorité dès le début du développement d'une application.</p>
+            <p class="text-justify">En outre, l’optimisation des performances de l'application a été un apprentissage crucial. Par exemple, l’utilisation d’indexation dans la base de données pour accélérer les requêtes et la gestion de la mise en cache des résultats ont permis d’améliorer la réactivité de l’application.</p>
         </div>
     </div>
 
