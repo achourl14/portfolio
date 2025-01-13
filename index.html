@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      margin-bottom: 50px;
+    }
+    .navbar-dark {
+      background-color: #333333;
+    }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ff6f61;
+    }
+    .btn-custom {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #ff3b2d;
+    }
+    footer {
+      background-color: #333333;
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .skills-card {
+      background-color: #ffffff;
+      border: 2px solid #ff6f61;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skills-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .skills-card i {
+      font-size: 3rem;
+      color: #ff6f61;
+      margin-bottom: 15px;
+    }
+    .card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      border-bottom: 2px solid #ff6f61;
+      transition: transform 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .card-text {
+      color: #666;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: 600;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ff6f61;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      font-weight: 600;
+    }
+    .section {
+      padding: 50px 0;
+    }
+    .cv-btn-container {
+      text-align: center;
+    }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #ff6f61;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-item {
+      padding: 20px;
+      background-color: white;
+      border-radius: 6px;
+      width: 45%;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent white;
+    }
+
+    .timeline-item.right::after {
+      left: -10px;
+      border-color: transparent white transparent transparent;
+    }
+
+    .timeline-item h3 {
+      color: #ff6f61;
+      font-size: 1.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 1rem;
+    }
+
+    .card img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .section-header {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    section#about p {
+      text-align: justify;
+    }
+
+  </style>
+</head>
+<body>
+
+<main>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portfolio Lisa ACHOUR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Compétences techniques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#personal-skills">Compétences personnelles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiences">Stage</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Section À propos -->
+  <section id="about" class="container section">
+    <h2 class="section-header">À propos de moi</h2>
+      <p>Je m'appelle <strong>LISA ACHOUR</strong>. J'ai suivi un parcours au lycée général à Saint-Crisol-les-Ales (30300), où j'ai choisi les spécialités Mathématiques, Physique-Chimie, et NSI (Numérique et Sciences Informatiques). En terminale, j'ai continué avec Mathématiques et NSI, et j'ai obtenu de bons résultats dans ces matières. Mes bonnes performances dans ces spécialités m'ont naturellement orientée vers une formation en lien avec ces domaines. C'est ainsi que j'ai décidé de poursuivre mes études en <strong>BUT Informatique</strong>.</p>
+      <p>Ce n'est qu'en première année de BUT que ma passion pour l'informatique est née, car c'était l'occasion pour moi de découvrir toutes les bases de ce domaine. J'ai particulièrement apprécié l'apprentissage des fondamentaux, ce qui m'a permis de mieux comprendre les concepts clés du développement informatique. En deuxième année, j'ai orienté mon parcours vers la spécialité <strong>RADV (Réponse aux Attentes des Clients via le Développement Web)</strong>, après avoir découvert ma véritable passion pour le développement web.</p>
+      <p><strong>Parcours de formation :</strong></p>
+      <p>Mon parcours scolaire a commencé avec un baccalauréat général où j'ai suivi les spécialités Mathématiques et NSI. J'ai toujours été intéressée par les matières scientifiques, en particulier l'informatique. Cette orientation m'a amenée à choisir un BUT Informatique, qui s'est révélé être une véritable révélation pour moi. En première année, j'ai appris les bases de l'informatique, ce qui m'a permis de découvrir un univers fascinant, et ma passion pour le développement web a commencé à se dessiner. C'est en deuxième année que j'ai décidé de me spécialiser dans le parcours RADV, car le développement web m'intéressait de plus en plus, notamment le front-end.</p>
+      <p><strong>Projets professionnels envisagés après le BUT :</strong></p>
+      <p>Après mon BUT, je souhaite continuer mes études en intégrant une école d'ingénieurs spécialisée dans le développement web ou bien poursuivre un Master dans ce domaine. Mon objectif à long terme est de travailler en tant que <strong>développeuse web front-end</strong>, car j'ai découvert cette passion lors de mon stage de deuxième année. J'aimerais participer à des projets de développement d'applications web et d'interfaces utilisateurs, et je suis convaincue que le développement front-end correspond parfaitement à mes aspirations professionnelles.</p>
+
+    <h2  class="section-header">Me contacter</h2>
+    <div class="d-flex justify-content-center mt-4">
+      <a href="https://www.linkedin.com/in/tonlinkedin" target="_blank" class="btn btn-custom me-3">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/tongithub" target="_blank" class="btn btn-dark">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Section CV -->
+  <section id="cv" class="container section cv-btn-container">
+    <h2 class="section-header">Mon CV</h2>
+    <a href="images/cv/Cv_Lisa_ACHOUR.pdf" class="btn btn-custom" download>Télécharger mon CV</a>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projects" class="container section">
+    <h2 class="section-header">Mes Projets</h2>
+    <div class="row">
+      <!-- Projet 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/sae-stage/Capture%20d'écran%202025-01-11%20193257.png" class="card-img-top" alt="Gestion de stages en PHP">
+          <div class="card-body">
+            <h5 class="card-title">Gestion de stages</h5>
+            <p class="card-text">Site en PHP natif pour gérer les stages et alternances (BUT 2).</p>
+            <a href="projets/sae_stage_alternance_projet.html" class="btn btn-custom">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+      <!-- Projet 2 -->
+<!--      <div class="col-md-4 mb-4">-->
+<!--        <div class="card">-->
+<!--          <img src="assets/images/projet2.jpg" class="card-img-top" alt="TrelloTrolle en JS">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">TrelloTrolle</h5>-->
+<!--            <p class="card-text">Reconstruction propre d’un site mal codé en JavaScript natif (BUT 2).</p>-->
+<!--            <a href="projets/sae_trellotrolle_projet.html" class="btn btn-custom">Voir le projet</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <!-- Projet 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/annuaire/Capture%20d'écran%202025-01-11%20181342.png" class="card-img-top" alt="Annuaire en Symfony">
+          <div class="card-body">
+            <h5 class="card-title">Annuaire en Symfony</h5>
+            <p class="card-text">Création d’un annuaire professionnel en Symfony (BUT 3).</p>
+            <a href="projets/annuaire_projet.html" class="btn btn-custom">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+      <!-- Ajout des projets -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/api_back/Capture%20d'écran%202025-01-11%20174412.png" class="card-img-top" alt="API REST en Symfony">
+          <div class="card-body">
+            <h5 class="card-title">API REST en Symfony</h5>
+            <p class="card-text">Développement d'une API REST en Symfony pour une gestion centralisée de données (BUT 3).</p>
+            <a href="projets/api_rest_projet.html" class="btn btn-custom">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/api_front/Capture%20d'écran%202025-01-11%20173755.png" class="card-img-top" alt="Front-end de l'API en Vue.js">
+          <div class="card-body">
+            <h5 class="card-title">Front-end de l'API en Vue.js</h5>
+            <p class="card-text">Développement du front-end pour l'API REST en Vue.js (BUT 3).</p>
+            <a href="projets/api_front_projet.html" class="btn btn-custom">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Compétences -->
+  <section id="skills" class="container section">
+    <h2 class="section-header">Mes Compétences Techniques</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fab fa-html5"></i>
+          <h5>HTML/CSS</h5>
+          <p>Création de sites web responsives et modernes.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fab fa-c"></i>
+          <h5>C</h5>
+          <p>Programmation en C pour les applications bas niveau.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <!-- Nouvelle icône pour Assembleur -->
+          <i class="fas fa-microchip"></i>
+          <h5>Assembleur</h5>
+          <p>Développement en langage Assembleur pour les systèmes embarqués.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fab fa-php"></i>
+          <h5>PHP & Symfony</h5>
+          <p>Création d’applications robustes en PHP et Symfony.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fab fa-golang"></i>
+          <h5>Go</h5>
+          <p>Développement backend avec Go.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fab fa-docker"></i>
+          <h5>Docker</h5>
+          <p>Gestion des conteneurs pour le déploiement.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <!-- Nouvelle icône pour les Bases de données -->
+          <i class="fas fa-database"></i>
+          <h5>Base de données</h5>
+          <p>SQL, MongoDB, Cassandra, PL/SQL.</p>
+        </div>
+      </div>
+      <!-- Ajout de la compétence Java -->
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-code"></i> <!-- Une icône représentant Java -->
+          <h5>Java</h5>
+          <p>Développement d'applications en Java, avec la maîtrise des concepts orientés objets.</p>
+        </div>
+      </div>
+
+      <!-- Ajout de la compétence Méthodes agiles -->
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-cogs"></i> <!-- Une icône représentant les méthodes agiles -->
+          <h5>Méthodes agiles</h5>
+          <p>Gestion de projet avec les méthodologies Scrum, et Agile.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="personal-skills" class="container section">
+    <h2 class="section-header">Mes Compétences Personnelles</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-users"></i>
+          <h5>Travail d'équipe</h5>
+          <p>Capacité à collaborer efficacement dans un environnement d'équipe pour atteindre des objectifs communs.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-clipboard-check"></i>
+          <h5>Sérieux</h5>
+          <p>Engagement et professionnalisme dans toutes les tâches entreprises, avec une attention particulière aux détails.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-lightbulb"></i>
+          <h5>Créativité</h5>
+          <p>Capacité à proposer des idées innovantes et à résoudre des problèmes de manière créative.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-tasks"></i>
+          <h5>Organisation</h5>
+          <p>Gestion efficace du temps et des priorités pour respecter les délais et optimiser la productivité.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-sync-alt"></i>
+          <h5>Adaptabilité</h5>
+          <p>Capacité à ajuster rapidement ses méthodes de travail face aux nouvelles situations ou aux imprévus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-headset"></i>
+          <h5>Communication</h5>
+          <p>Excellentes compétences en communication écrite et orale pour une collaboration fluide avec les collègues et clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Formation Scolaire -->
+  <section id="formation" class="container section">
+    <h2 class="section-header">Mon Parcours de Formation</h2>
+    <div class="timeline">
+      <!-- Collège -->
+      <div class="timeline-item left">
+        <img src="images/formation/college.jpg" class="card-img-top" alt="bellevue">
+        <h3>Collège Bellevue</h3>
+        <p><strong>Alès, 30100</strong></p>
+        <p><strong>2016 - 2019</strong></p>
+        <p>Obtention du brevet des collège mention Bien.</p>
+      </div>
+
+      <!-- Lycée -->
+      <div class="timeline-item right">
+        <h3>Lycée Jacques Prevert</h3>
+        <img src="images/formation/prevert.jpg" class="card-img-top" alt="prevert">
+        <p><strong>Saint-Christol-les-alès, 30300</strong></p>
+        <p><strong>2019 - 2022</strong></p>
+        <p>Obtention bac général avec mention Bien. Spécialités : Mathématiques, NSI (Numérique et Sciences Informatiques), et Physique-Chimie.</p>
+      </div>
+
+      <!-- 1ère année BUT Informatique -->
+      <div class="timeline-item left">
+        <h3>1ère année BUT Informatique à Grenoble</h3>
+        <img src="images/formation/DoyenGosse.jpg" class="card-img-top" alt="grenoble">
+        <p><strong>Grenoble, 38000</strong></p>
+        <p><strong>2022 - 2023</strong></p>
+        <p>J'ai intégré le programme du BUT Informatique à Grenoble, où j'ai approfondi mes connaissances en programmation, en algorithmique, et en bases de données.</p>
+      </div>
+
+      <!-- 2e et 3e année BUT Informatique -->
+      <div class="timeline-item right">
+        <h3>2e et 3e année BUT Informatique à Montpellier-Sète</h3>
+        <img src="images/formation/sete.png" class="card-img-top" alt="sete">
+        <p><strong>Sète, 34200</strong></p>
+        <p><strong>2023 - 2025</strong></p>
+        <p>Actuellement en  3e année du BUT Informatique, je me spécialise dans le parcours RACDV (Réalisation d'applications : conception, développement, validation)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Mes Expériences de Stage et Alternance -->
+  <section id="experiences" class="container section">
+    <h2 class="section-header">Mon Expérience de Stage</h2>
+    <div class="row">
+      <!-- Expérience 1 - Stage Développement Web -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <img src="images/stage/Capture%20d'écran%202025-01-11%20204650.png" class="card-img-top" alt="Stage Développement Web">
+          <div class="card-body">
+            <h5 class="card-title">Stage Développement Web</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Neoteem, 38200, de Avril 2024 - Juillet 2024</h6>
+            <p class="card-text">Développement de composants vueJS pour la gestion des biens immobiliers.</p>
+            <a href="projets/stage.html" class="btn btn-custom">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2024 Portfolio Lisa ACHOUR. Tous droits réservés.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
