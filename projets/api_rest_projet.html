@@ -3,14 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API - Détails</title>
+    <title>Projet 2 - API REST Symfony</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles pour les couleurs des compétences */
+        .competence-1 {
+            background-color: #FFA500; /* Orange */
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .competence-5 {
+            background-color: #6A5ACD; /* Bleu-violet */
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .competence-6 {
+            background-color: #8B4513; /* Marron */
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .competence-4 {
+            background-color: #32CD32; /* Vert */
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        /* Justifier le texte */
+        p, ul {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
 <!-- Barre de navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Retour à l'Index</a>
+        <a class="navbar-brand" href="../index.html">Accueil</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,47 +59,76 @@
     </div>
 </nav>
 
-<!-- Contenu du projet API -->
+<!-- Contenu du projet -->
 <div class="container mt-5">
+    <!-- Section Titre du projet -->
     <div class="row">
         <div class="col-md-12">
-            <h1 class="display-4 text-center">API - Gestion des Données</h1>
+            <h1 class="display-4 text-center">Projet 2 - API REST Symfony</h1>
         </div>
     </div>
 
-    <!-- Description du projet -->
+    <!-- Paragraphe de description -->
     <div class="row mt-4">
         <div class="col-md-12">
-            <p class="lead">Ce projet consiste à développer une API RESTful permettant de gérer des ressources telles que des utilisateurs, des produits ou des commandes. L'objectif était de créer une interface accessible via HTTP pour manipuler ces ressources (CRUD).</p>
-            <p>Le projet utilise le framework Symfony et expose les données via des points d'accès sécurisés en utilisant des jetons d'authentification (JWT). Chaque requête peut être filtrée, triée et paginée pour une utilisation optimale côté client.</p>
-            <p>Les principales difficultés rencontrées ont été la gestion des autorisations et la mise en place des tests pour garantir la fiabilité de l'API.</p>
+            <h2>Contexte et Description du projet</h2>
+            <p>Nous avons réalisé un projet d'API REST en Symfony en groupe de 3 (Maxime Petit, Xavier Trouche, et moi-même). L'objectif était de créer une API permettant de gérer des événements musicaux. L'API permet à des utilisateurs de s'inscrire, de s'authentifier, de gérer leur compte, de créer des événements, et de gérer les participants. L'API gère également les événements, les artistes, les scènes et les horaires des concerts. Nous avons utilisé Docker de l'IUT pour stocker et déployer notre projet.</p>
+
+            <h3>Objectifs de l'API</h3>
+            <ul>
+                <li>Gestion des événements (musique, festivals) avec des détails comme les horaires, artistes et scènes.</li>
+                <li>Authentification des utilisateurs avec gestion de rôles (utilisateur, organisateur, administrateur) via JWT et refresh tokens.</li>
+                <li>Création, modification et suppression des événements par les organisateurs.</li>
+                <li>Inscription et désinscription des utilisateurs aux événements, avec gestion de la liste des participants et des horaires.</li>
+                <li>Consultation des événements auxquels l'utilisateur est inscrit, ainsi que de ceux organisés par l'organisateur.</li>
+                <li>Suppression d'événements et de comptes utilisateurs par les administrateurs.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- Carrousel -->
-    <div class="row mt-4">
+    <!-- Carrousel : Rendu final du projet -->
+    <div class="row mt-5">
         <div class="col-md-12">
-            <div id="carouselAPI" class="carousel slide" data-bs-ride="carousel">
+            <h3>Rendu final de l'api</h3>
+            <div id="carouselRenduFinal" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselAPI" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselAPI" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="3" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="4" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="5" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselRenduFinal" data-bs-slide-to="6" aria-label="Slide 2"></button>
+
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172346.png" class="d-block w-100" alt="Image API">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20174412.png" class="d-block w-100" alt="Rendu Final 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172354.png" class="d-block w-100" alt="Image API 2">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172426.png" class="d-block w-100" alt="Rendu Final 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172400.png" class="d-block w-100" alt="Image API 3">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172418.png" class="d-block w-100" alt="Rendu Final 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172400.png" class="d-block w-100" alt="Rendu Final 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172354.png" class="d-block w-100" alt="Rendu Final 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172346.png" class="d-block w-100" alt="Rendu Final 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/api_back/Capture%20d'écran%202025-01-11%20172436.png" class="d-block w-100" alt="Rendu Final 7">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAPI" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRenduFinal" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Précédent</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselAPI" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselRenduFinal" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Suivant</span>
                 </button>
@@ -73,21 +137,80 @@
     </div>
 
 
-    <!-- Bilan des apprentissages -->
+    <!-- Bilans d'apprentissage -->
     <div class="row mt-5">
         <div class="col-md-12">
-            <h2>Bilan des apprentissages</h2>
-            <p>Ce projet m'a permis de renforcer mes compétences en développement d'API RESTful. J'ai appris à sécuriser une API avec des tokens JWT et à gérer les requêtes HTTP efficacement. L'intégration de tests avec PHPUnit a également été un point clé pour garantir le bon fonctionnement de l'API.</p>
+            <h3>Bilans d'apprentissage</h3>
+            <div class="competence-1">
+                <h4>Compétence 1 : Développement d'Applications</h4>
+                <ul>
+                    <li>AC 1 : Développer des applications simples basées sur Symfony et API Platform.</li>
+                    <li>AC 2 : Élaborer des conceptions simples des ressources et des endpoints d'API.</li>
+                    <li>AC 3 : Vérifier la qualité des données via des tests unitaires et d'intégration.</li>
+                    <li>AC 4 : Développer des interfaces utilisateurs (gestion des comptes et événements).</li>
+                </ul>
+            </div>
+            <div class="competence-5">
+                <h4>Compétence 5 : Gestion des Données</h4>
+                <ul>
+                    <li>AC 1 : Concevoir et mettre en place une base de données relationnelle pour stocker les événements, utilisateurs, et rôles.</li>
+                    <li>AC 2 : Visualiser et manipuler les données dans l'API via des endpoints REST.</li>
+                    <li>AC 3 : Sécuriser les données avec JWT et implémenter la gestion des tokens pour les utilisateurs.</li>
+                    <li>AC 4 : Organiser la restitution des données avec une gestion correcte des relations entre événements, utilisateurs, et rôles.</li>
+                </ul>
+            </div>
+            <div class="competence-6">
+                <h4>Compétence 6 : Collaboration et Sécurité</h4>
+                <ul>
+                    <li>AC 1 : Collaborer avec l'équipe pour définir les spécifications techniques et développer l'API.</li>
+                    <li>AC 2 : Assurer la confidentialité et la sécurité des données utilisateurs en utilisant les bonnes pratiques d'authentification et de gestion des tokens.</li>
+                    <li>AC 3 : Manipuler les données de manière sécurisée, avec des vérifications et validations appropriées.</li>
+                    <li>AC 4 : Assurer l'intégrité des données lors de l'inscription, modification ou suppression des utilisateurs et événements.</li>
+                </ul>
+            </div>
+            <div class="competence-4">
+                <h4>Compétence 4 : Gérer les Données</h4>
+                <ul>
+                    <li>AC 1 : Mettre à jour et interroger une base de données relationnelle à travers l'API Symfony.</li>
+                    <li>AC 2 : Concevoir et optimiser la base de données pour gérer les événements, utilisateurs et interactions de manière efficace.</li>
+                    <li>AC 3 : Organiser et sécuriser la restitution des données des événements et des utilisateurs inscrits, tout en respectant la vie privée.</li>
+                    <li>AC 4 : Manipuler des données hétérogènes à travers les différentes ressources et sous-ressources dans l'API.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <!-- Bouton retour -->
-    <div class="container text-center mt-4">
-        <a href="../index.html" class="btn btn-secondary">Retour à la liste des projets</a>
+    <!-- Nouveaux éléments ajoutés -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Travail Personnel réalisé</h3>
+            <ul>
+                <li>Mise en place du state processor utilisateur pour gérer les états de l'utilisateur au sein de l'application.</li>
+                <li>Développement d'un générateur de groupes pour faciliter la gestion des participants aux événements.</li>
+                <li>Normalisation et dénormalisation des ressources pour assurer une manipulation optimale des données.</li>
+                <li>Gestion des sous-ressources pour une organisation plus fine des relations entre entités.</li>
+                <li>Implémentation de l'authentification par JWT, avec gestion des refresh tokens et invalidation des tokens pour sécuriser l'accès à l'API.</li>
+                <li>Gestion des erreurs de manière centralisée pour assurer une réponse cohérente et sécurisée en cas d'échec.</li>
+                <li>Création de commandes pour gérer les utilisateurs et leurs rôles, telles que la création d'un utilisateur, l'ajout et la suppression de rôles.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Technologies et Outils utilisés -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Technologies et Outils utilisés</h3>
+            <ul>
+                <li><strong>Symfony :</strong> Framework PHP utilisé pour développer l'API REST et gérer les routes et contrôleurs.</li>
+                <li><strong>API Platform :</strong> Utilisé pour faciliter la création d'API REST, sérialisation des données et gestion des permissions.</li>
+                <li><strong>JWT (JSON Web Tokens) :</strong> Pour l'authentification sécurisée des utilisateurs (création de tokens, rafraîchissement, invalidation).</li>
+                <li><strong>Docker :</strong> Utilisé pour gérer l'environnement de développement et faciliter le déploiement du projet avec Docker Compose.</li>
+                <li><strong>MySQL :</strong> Base de données relationnelle pour stocker les événements, utilisateurs, inscriptions, et rôles.</li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

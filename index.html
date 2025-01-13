@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f8f9fa;
@@ -25,6 +25,10 @@
     }
     .navbar-nav .nav-link {
       font-weight: 500;
+      color: #ffffff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ff6f61;
     }
     .btn-custom {
       background-color: #ff6f61;
@@ -32,6 +36,7 @@
       padding: 10px 20px;
       border-radius: 5px;
       font-size: 1.1rem;
+      transition: background-color 0.3s ease;
     }
     .btn-custom:hover {
       background-color: #ff3b2d;
@@ -50,10 +55,11 @@
       padding: 25px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .skills-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     }
     .skills-card i {
       font-size: 3rem;
@@ -67,7 +73,7 @@
     }
     .card img {
       border-bottom: 2px solid #ff6f61;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
     .card img:hover {
       transform: scale(1.05);
@@ -103,7 +109,6 @@
     .section {
       padding: 50px 0;
     }
-    /* Centrage du bouton CV */
     .cv-btn-container {
       text-align: center;
     }
@@ -165,6 +170,26 @@
     .timeline-item p {
       font-size: 1rem;
     }
+
+    .card img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .section-header {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    section#about p {
+      text-align: justify;
+    }
+
   </style>
 </head>
 <body>
@@ -173,27 +198,47 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand" href="#">Portfolio Lisa ACHOUR</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Compétences techniques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#personal-skills">Compétences personnelles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiences">Stage</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   <!-- Section À propos -->
   <section id="about" class="container section">
     <h2 class="section-header">À propos de moi</h2>
-    <p>Étudiant en BUT Informatique, passionné par le développement web et logiciel. Voici mon parcours et mes projets réalisés lors de mes études.</p>
-    <p><strong>Objectif professionnel :</strong> devenir développeur full-stack ou ingénieur logiciel.</p>
+      <p>Je m'appelle <strong>LISA ACHOUR</strong>. J'ai suivi un parcours au lycée général à Saint-Crisol-les-Ales (30300), où j'ai choisi les spécialités Mathématiques, Physique-Chimie, et NSI (Numérique et Sciences Informatiques). En terminale, j'ai continué avec Mathématiques et NSI, et j'ai obtenu de bons résultats dans ces matières. Mes bonnes performances dans ces spécialités m'ont naturellement orientée vers une formation en lien avec ces domaines. C'est ainsi que j'ai décidé de poursuivre mes études en <strong>BUT Informatique</strong>.</p>
+      <p>Ce n'est qu'en première année de BUT que ma passion pour l'informatique est née, car c'était l'occasion pour moi de découvrir toutes les bases de ce domaine. J'ai particulièrement apprécié l'apprentissage des fondamentaux, ce qui m'a permis de mieux comprendre les concepts clés du développement informatique. En deuxième année, j'ai orienté mon parcours vers la spécialité <strong>RADV (Réponse aux Attentes des Clients via le Développement Web)</strong>, après avoir découvert ma véritable passion pour le développement web.</p>
+      <p><strong>Parcours de formation :</strong></p>
+      <p>Mon parcours scolaire a commencé avec un baccalauréat général où j'ai suivi les spécialités Mathématiques et NSI. J'ai toujours été intéressée par les matières scientifiques, en particulier l'informatique. Cette orientation m'a amenée à choisir un BUT Informatique, qui s'est révélé être une véritable révélation pour moi. En première année, j'ai appris les bases de l'informatique, ce qui m'a permis de découvrir un univers fascinant, et ma passion pour le développement web a commencé à se dessiner. C'est en deuxième année que j'ai décidé de me spécialiser dans le parcours RADV, car le développement web m'intéressait de plus en plus, notamment le front-end.</p>
+      <p><strong>Projets professionnels envisagés après le BUT :</strong></p>
+      <p>Après mon BUT, je souhaite continuer mes études en intégrant une école d'ingénieurs spécialisée dans le développement web ou bien poursuivre un Master dans ce domaine. Mon objectif à long terme est de travailler en tant que <strong>développeuse web front-end</strong>, car j'ai découvert cette passion lors de mon stage de deuxième année. J'aimerais participer à des projets de développement d'applications web et d'interfaces utilisateurs, et je suis convaincue que le développement front-end correspond parfaitement à mes aspirations professionnelles.</p>
+
+    <h2  class="section-header">Me contacter</h2>
     <div class="d-flex justify-content-center mt-4">
       <a href="https://www.linkedin.com/in/tonlinkedin" target="_blank" class="btn btn-custom me-3">
         <i class="fab fa-linkedin"></i> LinkedIn
@@ -226,16 +271,16 @@
         </div>
       </div>
       <!-- Projet 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="assets/images/projet2.jpg" class="card-img-top" alt="TrelloTrolle en JS">
-          <div class="card-body">
-            <h5 class="card-title">TrelloTrolle</h5>
-            <p class="card-text">Reconstruction propre d’un site mal codé en JavaScript natif (BUT 2).</p>
-            <a href="projets/sae_trellotrolle_projet.html" class="btn btn-custom">Voir le projet</a>
-          </div>
-        </div>
-      </div>
+<!--      <div class="col-md-4 mb-4">-->
+<!--        <div class="card">-->
+<!--          <img src="assets/images/projet2.jpg" class="card-img-top" alt="TrelloTrolle en JS">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">TrelloTrolle</h5>-->
+<!--            <p class="card-text">Reconstruction propre d’un site mal codé en JavaScript natif (BUT 2).</p>-->
+<!--            <a href="projets/sae_trellotrolle_projet.html" class="btn btn-custom">Voir le projet</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
       <!-- Projet 3 -->
       <div class="col-md-4 mb-4">
         <div class="card">
@@ -273,7 +318,7 @@
 
   <!-- Section Compétences -->
   <section id="skills" class="container section">
-    <h2 class="section-header">Mes Compétences</h2>
+    <h2 class="section-header">Mes Compétences Techniques</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="skills-card">
@@ -284,9 +329,17 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="skills-card">
-          <i class="fab fa-js"></i>
-          <h5>JavaScript</h5>
-          <p>Développement interactif avec des frameworks.</p>
+          <i class="fab fa-c"></i>
+          <h5>C</h5>
+          <p>Programmation en C pour les applications bas niveau.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <!-- Nouvelle icône pour Assembleur -->
+          <i class="fas fa-microchip"></i>
+          <h5>Assembleur</h5>
+          <p>Développement en langage Assembleur pour les systèmes embarqués.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
@@ -312,9 +365,76 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="skills-card">
-          <i class="fab fa-database"></i>
+          <!-- Nouvelle icône pour les Bases de données -->
+          <i class="fas fa-database"></i>
           <h5>Base de données</h5>
           <p>SQL, MongoDB, Cassandra, PL/SQL.</p>
+        </div>
+      </div>
+      <!-- Ajout de la compétence Java -->
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-code"></i> <!-- Une icône représentant Java -->
+          <h5>Java</h5>
+          <p>Développement d'applications en Java, avec la maîtrise des concepts orientés objets.</p>
+        </div>
+      </div>
+
+      <!-- Ajout de la compétence Méthodes agiles -->
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-cogs"></i> <!-- Une icône représentant les méthodes agiles -->
+          <h5>Méthodes agiles</h5>
+          <p>Gestion de projet avec les méthodologies Scrum, et Agile.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="personal-skills" class="container section">
+    <h2 class="section-header">Mes Compétences Personnelles</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-users"></i>
+          <h5>Travail d'équipe</h5>
+          <p>Capacité à collaborer efficacement dans un environnement d'équipe pour atteindre des objectifs communs.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-clipboard-check"></i>
+          <h5>Sérieux</h5>
+          <p>Engagement et professionnalisme dans toutes les tâches entreprises, avec une attention particulière aux détails.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-lightbulb"></i>
+          <h5>Créativité</h5>
+          <p>Capacité à proposer des idées innovantes et à résoudre des problèmes de manière créative.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-tasks"></i>
+          <h5>Organisation</h5>
+          <p>Gestion efficace du temps et des priorités pour respecter les délais et optimiser la productivité.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-sync-alt"></i>
+          <h5>Adaptabilité</h5>
+          <p>Capacité à ajuster rapidement ses méthodes de travail face aux nouvelles situations ou aux imprévus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="skills-card">
+          <i class="fas fa-headset"></i>
+          <h5>Communication</h5>
+          <p>Excellentes compétences en communication écrite et orale pour une collaboration fluide avec les collègues et clients.</p>
         </div>
       </div>
     </div>
@@ -364,27 +484,17 @@
 
   <!-- Section Mes Expériences de Stage et Alternance -->
   <section id="experiences" class="container section">
-    <h2 class="section-header">Mes Expériences de Stage et Alternance</h2>
+    <h2 class="section-header">Mon Expérience de Stage</h2>
     <div class="row">
       <!-- Expérience 1 - Stage Développement Web -->
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
-          <img src="images/stage/stage.png" class="card-img-top" alt="Stage Développement Web">
+          <img src="images/stage/Capture%20d'écran%202025-01-11%20204650.png" class="card-img-top" alt="Stage Développement Web">
           <div class="card-body">
             <h5 class="card-title">Stage Développement Web</h5>
             <h6 class="card-subtitle mb-2 text-muted">Neoteem, 38200, de Avril 2024 - Juillet 2024</h6>
             <p class="card-text">Développement de composants vueJS pour la gestion des biens immobiliers.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <img src="images/stage/Capture%20d'écran%202025-01-11%20204650.png" class="card-img-top" alt="Stage Développement Web">
-          <div class="card-body">
-            <h5 class="card-title">Alternance Développement Web</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Neoteem, 38200, de Septembre 2024 - Août 2025</h6>
-            <p class="card-text">Développement de composants vueJS pour la gestion des biens immobiliers.</p>
+            <a href="projets/stage.html" class="btn btn-custom">Voir le projet</a>
           </div>
         </div>
       </div>
@@ -394,7 +504,7 @@
 </main>
 
 <footer>
-  &copy; 2024 Portfolio. Tous droits réservés.
+  &copy; 2024 Portfolio Lisa ACHOUR. Tous droits réservés.
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
